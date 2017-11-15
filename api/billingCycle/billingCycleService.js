@@ -8,7 +8,7 @@ BillingCycle.route('count', function(req, res, next) {
     if(err){
       res.status(500).json({errors: [err]});
     }else {
-      res.json({value})
+      res.json({value});
     }
   })
 });
