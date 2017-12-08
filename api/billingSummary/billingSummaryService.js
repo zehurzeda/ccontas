@@ -5,7 +5,8 @@ function getSummary(req, res) {
   BillingCycle.aggregate({
     $project: {
       credit: {$sum: "$credits.value"},
-      debt: {$sum: "$debts.value"}}
+      debt: {$sum: "$debts.value"}
+    }
   }, {
     $group: {
       _id: null,
